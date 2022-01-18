@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,600;1,900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #24252A;
+}
+
+li,
+a,
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #cdf0f1;
+    text-decoration: none;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 2rem;
+    color: #cdf0f1;
+}
+
+h2 a {
+    transition: all 0.3s ease 0s;
+    border-bottom: 1px solid rgb(53, 153, 120);
+}
+
+h2 a:hover {
+    color: red;
+    border-bottom: 5px solid red;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.navbar {
+    list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 0px 60px;
+}
+
+.navbar li a {
+    transition: all 0.3s ease 0s;
+}
+
+.navbar li a:hover {
+    color: #00bb8a;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: transparent;
+    border: none;
+    border: 2px solid #fff;
+    cursor: pointer;
+    width: 100px;
+    transition: all 0.2s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+    border-radius: 2rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+
+/* MESSAGES */
+
+.message {
+    padding: 1em;
+    color: #004085;
+    background-color: #cce5ff;
+    border: 1px solid #cce5ff;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto 2em;
+    max-width: 60%;
+}
+
+
+/* LOGIN E REGISTER */
+
+.auth-container {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-container h2 {
+    margin-bottom: 1em;
+    color: #FFF;
+    border-left: 4px solid #f6982d;
+    padding: .3em;
+    width: 100px;
+}
+
+.auth-container a {
+    color: #f6982d;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-control label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.form-control input,
+.form-control textarea {
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #f6982d;
+    width: 500px;
+}
+
+form input[type='submit'],
+.btn {
+    background-color: transparent;
+    color: #f6982d;
+    border: 2px solid #f6982d;
+    padding: .5em 1.2em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+form input[type='submit']:hover,
+.btn:hover {
+    background-color: #f6982d;
+    color: #fff;
+}
+
+
+/* CREATE | EDIT FORM*/
+
+.tought-form-container {
+    margin: 1em auto;
+}
+
+.tought-form-container a {
+    color: #f6982d;
+}
+
+.tought-form-container a:hover {
+    color: #fff;
+}
+
+.tought-form-container h1 {
+    margin-bottom: 1em;
+    color: #fff;
+    border-left: 4px solid #f6982d;
+    padding: 0.3em;
+}
+
+.tought-form-container form {
+    max-width: 30%;
+}
+
+
+/* DASHBOARD */
+
+.dashboard {
+    margin: 0 auto;
+}
+
+.title-container {
+    display: flex;
+    border-bottom: 3px solid #004085;
+}
+
+.title-container h2 {
+    margin-right: 1em;
+}
+
+.pensamentos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pensamentos ul {
+    list-style: none;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.pensamentos ul li {
+    color: #fff;
+    font-size: 3em;
+}
+
+.pensamentos ul li .title {
+    text-align: center;
+}
+
+.pensamentos ul li form {
+    display: flex;
+    justify-content: row;
+}
+
+.pensamentos ul li form input {
+    color: #24252A;
+    border: 2px solid #24252A;
+    padding: .5em 1.2em;
+    margin: 1em 2em;
+    font-size: .2em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pensamentos ul li form input:hover {
+    background-color: #22afd3;
+    color: #fff;
+}
+
+.home-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-header p,
+.home-header form {
+    margin-bottom: 1.2em;
+}
+
+.home-header input {
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: .5em;
+}
+
+.home-header input[type='text'] {
+    margin: 1em auto;
+    width: 60%;
+}
+
+.home-header input::placeholder {
+    color: #fff;
+}
+
+.order-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto 1em;
+}
+
+.order-container span {
+    font-weight: bold;
+    color: #fff;
+}
+
+.order-container form {
+    margin: 0;
+}
+
+.order-container button {
+    margin-bottom: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.order-container button:hover,
+.order-container a:hover {
+    color: #22afd3;
+}
+
+.intro {
+    margin: 1em auto;
+}
+
+.toughts-container figure {
+    border-bottom: 1px solid #333;
+    padding: 0.5em;
+    max-width: 50%;
+    margin: 0 auto 1em;
+}
+
+.toughts-container blockquote {
+    font-style: italic;
+    font-size: 2em;
+    margin-bottom: .4em;
+}
+
+.like-container button[type='submit'] {
+    color: rgb(53, 153, 120)
+}
+
+span {
+    color: #cce5ff
+}
+
+.options-like {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    width: 10px;
+    margin-left: -1em;
+}
+
+.options-like:hover {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.options-dislike {
+    background-color: rgb(18, 235, 47);
+    max-width: 25px;
+}
+
+label[for="like"] {
+    margin-top: 1em;
+}

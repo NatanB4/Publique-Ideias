@@ -1,0 +1,106 @@
+<div class="home-header">
+    <div class="intro">
+        {{#if search}}
+        <h1>
+            Você esta buscando por:
+            <span>
+                {{search}}
+            </span>
+        </h1>
+        {{#if toughtQty}}
+        <p>
+            Foram encontrados:
+            <span>
+                {{toughtQty}}
+            </span>
+        </p>
+        {{else}}
+        <p>
+            Nenhum pensamento encontrado para o tema
+            <span>
+                {{search}}
+            </span>
+        </p>
+        {{/if}}
+        {{else}}
+        <h1>
+            Todos os Pensamentos
+        </h1>
+        {{/if}}
+        <form action="/" method="get">
+            <input type="text" name="search" placeholder="Está buscando por algo?" />
+            <input type="submit" class="btn" value="Procurar" />
+        </form>
+    </div>
+    <div class="order-container">
+        <span>
+            Ordernar por:
+        </span>
+        <form action="/" method="get">
+            <input type="hidden" name="search" value="{{this.search}}" />
+            <input type="hidden" name="order" value="new" />
+            <button type="submit">
+                <i class="bi bi-arrow-up"></i>
+            </button>
+        </form>
+        <form action="/" method="get">
+            <input type="hidden" name="search" value="{{this.search}}" />
+            <input type="hidden" name="order" value="old" />
+            <button type="submit">
+                <i class="bi bi-arrow-down"></i>
+            </button>
+        </form>
+        <a href="/">
+            Limpar
+        </a>
+    </div>
+</div>
+<div class="toughts-container">
+    {{#if logado}}
+    {{#each toughts}}
+    <figure>
+        <blockquote>
+            "
+            {{this.title}}"
+        </blockquote>
+        <figcaption>
+            por
+            <span>{{this.User.name}}</span>
+        </figcaption>
+        <form action="/" method="get">
+            <input type="hidden" name="search" value="{{this.search}}" />
+            <input type="hidden" name="like" value="{{this.id}}" />
+            <div>
+                <label id="label-{{this.id}}" for="like">
+                    {{this.like}}
+                </label>
+                <button class="options-like" type="submit">
+                    <i class="small material-icons">
+                        favorite
+                    </i>
+                </button>
+            </div>
+        </form>
+    </figure>
+    {{/each}}
+    {{else}}
+    {{#each toughts}}
+    <figure>
+        <blockquote>
+            "
+            {{this.title}}
+            "
+        </blockquote>
+        <figcaption>
+            por
+            <span>
+                {{this.User.name}}
+            </span>
+        </figcaption>
+        <p>
+            Entre para interagir com esse pensamento
+        </p>
+    </figure>
+    {{/each}}
+    {{/if}}
+</div>
