@@ -1,5 +1,5 @@
-# Toughts
-A website made for you to publish your ideas made with node.js/Um site para você publicar suas ideias do com sistema de like(em-breve)
+# Toughts (Full Stack)
+Site para você publicar suas ideias do com sistema de like
 
 # O Projeto
 <ul>
